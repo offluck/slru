@@ -1,4 +1,8 @@
-# Simple Cache
+# Simple LRU Cache
+
+[ci]: https://github.com/offluck/slru/actions/workflows/ci.yaml/badge.svg
+
+![CI][ci]
 
 With this library you can easily add thread safe LRU Cache to your service
 
@@ -7,7 +11,9 @@ With this library you can easily add thread safe LRU Cache to your service
 ```go
 package main
 
-import "github.com/offluck/slru"
+import (
+    "github.com/offluck/slru"
+)
 
 var (
 	LoginAttempts = slru.NewCache[string, int](0)
@@ -25,5 +31,4 @@ func main() {
 		// Error
 	}
 }
-
 ```
